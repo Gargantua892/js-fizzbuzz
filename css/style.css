@@ -1,0 +1,42 @@
+body{
+    background-color: #083b4c;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#griglia{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    padding: 64px 0px;
+    color: #fff;
+}
+
+.box{
+    max-height: 100%;
+    width: calc((100% / 7) - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+}
+
+.default-color{
+    background-color: #1289b2;
+}
+.fizz{
+    background-color: #08d6a0;
+}
+
+.buzz{
+    background-color: #ffd166;
+}
+
+.fizz-buzz{
+    background-color: red;
+}
