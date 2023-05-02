@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: #083b4c;
     font-family: Arial, Helvetica, sans-serif
@@ -6,8 +9,9 @@ body{
 #griglia{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -19,12 +23,19 @@ body{
 
 .box{
     max-height: 100%;
-    width: calc((100% / 7) - 20px);
+    width: calc((100% / 7) - 20px) ;
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1;
+    padding: 10px;
+    /* aspect-ratio: 1 / 1; */
 }
+
+.box:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 
 .default-color{
     background-color: #1289b2;

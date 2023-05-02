@@ -12,7 +12,12 @@ const element = document.createElement('span');
 element.classList.add("box");
 
 // Verificare se divisibili per 3
-if(i % 3 === 0){
+if((i % 3 === 0) && (i % 5 === 0)){
+    element.classList.add("fizz-buzz");
+    element.innerHTML = "FizzBuzz";
+    console.log("prova");
+}
+else if(i % 3 === 0){
     element.classList.add("fizz")
     element.innerHTML = "Fizz";
 }
@@ -22,23 +27,18 @@ else if(i % 5 === 0){
     element.innerHTML = "Buzz";
 }
 
-else if((i % 3 === 0) || (i % 5 === 0)){
-    element.classList.add("fizz-buzz");
-    element.innerHTML = "FizzBuzz";
-    console.log("prova");
-}
-
 else{
     i = i;
     element.classList.add("default-color");
+    //assegnazione numero ciclato all'elemento html
+element.append(i);
 }
 
-//assegnazione numero ciclato all'elemento html
-element.append(i);
+
 
 //append elemento al contenitore
 grid.append(element);
-
+}
 
 
 
@@ -51,7 +51,7 @@ grid.append(element);
 //         console.log(i);
 //     }
   
- }
+
 
 
 
